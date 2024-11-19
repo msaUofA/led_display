@@ -1,0 +1,352 @@
+{
+  "version": 1,
+  "author": "Nasif Qadri",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 17.54,
+      "left": 138.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg1",
+      "top": -57.64,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg2",
+      "top": 28.76,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg3",
+      "top": 115.16,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg4",
+      "top": 201.56,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg5",
+      "top": 287.96,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-tm1637-7segment",
+      "id": "sevseg6",
+      "top": -144.04,
+      "left": -175.37,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix1",
+      "top": 432.6,
+      "left": -194.16,
+      "attrs": {
+        "chain": "4"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "sevseg1:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg2:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h9.6",
+        "v-86.4",
+        "h0",
+        "v0",
+        "h134.4"
+      ]
+    ],
+    [
+      "sevseg3:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h9.6",
+        "v-172.8",
+        "h134.4"
+      ]
+    ],
+    [
+      "sevseg4:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h9.6",
+        "v-259.2",
+        "h134.4"
+      ]
+    ],
+    [
+      "sevseg1:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h96"
+      ]
+    ],
+    [
+      "sevseg2:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h19.2",
+        "v-86.4",
+        "h76.8"
+      ]
+    ],
+    [
+      "sevseg3:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h19.2",
+        "v-172.8",
+        "h76.8"
+      ]
+    ],
+    [
+      "sevseg4:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h19.2",
+        "v-259.2",
+        "h76.8"
+      ]
+    ],
+    [
+      "sevseg5:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h19.2",
+        "v-345.6",
+        "h76.8"
+      ]
+    ],
+    [
+      "sevseg5:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h9.6",
+        "v-345.6",
+        "h134.4"
+      ]
+    ],
+    [
+      "sevseg5:CLK",
+      "esp:2",
+      "gold",
+      [
+        "h124.8"
+      ]
+    ],
+    [
+      "sevseg5:DIO",
+      "esp:0",
+      "green",
+      [
+        "h144"
+      ]
+    ],
+    [
+      "sevseg4:DIO",
+      "esp:19",
+      "green",
+      [
+        "h182.4"
+      ]
+    ],
+    [
+      "sevseg4:CLK",
+      "esp:18",
+      "gold",
+      [
+        "h192"
+      ]
+    ],
+    [
+      "sevseg1:DIO",
+      "esp:14",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg1:CLK",
+      "esp:27",
+      "gold",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg2:CLK",
+      "esp:25",
+      "gold",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg2:DIO",
+      "esp:33",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg3:CLK",
+      "esp:22",
+      "gold",
+      [
+        "h57.6",
+        "v57.6",
+        "h192"
+      ]
+    ],
+    [
+      "sevseg3:DIO",
+      "esp:23",
+      "green",
+      [
+        "h48",
+        "v57.6",
+        "h211.2"
+      ]
+    ],
+    [
+      "sevseg6:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "h9.6",
+        "v86.4",
+        "h134.4"
+      ]
+    ],
+    [
+      "sevseg6:VCC",
+      "esp:5V",
+      "red",
+      [
+        "h19.2",
+        "v86.4",
+        "h76.8"
+      ]
+    ],
+    [
+      "sevseg6:DIO",
+      "esp:13",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg6:CLK",
+      "esp:12",
+      "gold",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "matrix1:DIN",
+      "esp:16",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "matrix1:CS",
+      "esp:17",
+      "blue",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "matrix1:CLK",
+      "esp:5",
+      "gold",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sevseg5:GND",
+      "matrix1:GND",
+      "black",
+      [
+        "h153.6",
+        "v115.2"
+      ]
+    ],
+    [
+      "sevseg5:VCC",
+      "matrix1:V+",
+      "red",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
