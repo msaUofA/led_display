@@ -89,7 +89,7 @@ void parsePrayerTimes(const String& jsonString, uint8_t hours[], uint8_t minutes
 
   for (int i = 0; i < numKeys; ++i) {
     String key = "\"" + String(keys[i]) + "\":\""; // search pattern
-    uint8_t startndex = jsonString.indexOf(key);
+    uint8_t startIndex = jsonString.indexOf(key);
 
     if (startIndex != -1) {
       startIndex += key.length(); 
