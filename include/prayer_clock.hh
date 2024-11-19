@@ -57,8 +57,6 @@ extern MD_Parola max72;
 extern String fajr, sunrise, dhuhr, asr, maghrib, isha;
 extern const char* MONTHS[];
 
-const long INTERVAL;
-
 extern struct tm timeinfo;
 
 extern uint32_t t1, t2;

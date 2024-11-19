@@ -193,7 +193,7 @@ void loop() {
 
   if (max72.displayAnimate()) {
     uint32_t t2 = millis();
-    if (t2 - t1 >= interval) {
+    if (t2 - t1 >= INTERVAL) {
       t1 = t2;
       String json = prayer_times();
       Serial.println(json);
