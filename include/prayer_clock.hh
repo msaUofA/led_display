@@ -41,7 +41,7 @@
 #define CS_PIN 5
 
 // Segment definition
-extern const uint8_t SEGMENTS[] = {0b01111111, 0b01111111, 0b01111111, 0b01111111};;
+extern const uint8_t SEGMENTS[];
 
 // TM1637 display objects
 extern TM1637 display1;

@@ -29,6 +29,9 @@ const char* MONTHS[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", 
 
 struct tm timeinfo;
 
+uint32_t t1 = millis();
+uint32_t t2 = millis();
+
 void connect_wifi() {
 
   Serial.print("connecting to ");
@@ -77,6 +80,7 @@ String prayer_times() {
 
     http.end();  
   }
+  return "";
 }
 
 void parsePrayerTimes(const String& jsonString, uint8_t hours[], uint8_t minutes[]) {
@@ -85,7 +89,7 @@ void parsePrayerTimes(const String& jsonString, uint8_t hours[], uint8_t minutes
 
   for (int i = 0; i < numKeys; ++i) {
     String key = "\"" + String(keys[i]) + "\":\""; // search pattern
-    uint8_t startIndex = jsonString.indexOf(key);
+    uint8_t startndex = jsonString.indexOf(key);
 
     if (startIndex != -1) {
       startIndex += key.length(); 
@@ -185,14 +189,12 @@ void setup() {
     Serial.println("waiting for time...");
     delay(1000);
   }
-
-  uint32_t t1 = millis();
 }
 
 void loop() {
 
   if (max72.displayAnimate()) {
-    uint32_t t2 = millis();
+    t2 = millis();
     if (t2 - t1 >= INTERVAL) {
       t1 = t2;
       String json = prayer_times();
