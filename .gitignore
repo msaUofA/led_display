@@ -36,4 +36,4 @@
 *build/
 *.vscode/
 
-include/secrets.hh
+*secrets.hh
