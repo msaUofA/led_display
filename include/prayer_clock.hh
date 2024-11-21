@@ -21,14 +21,14 @@
 #define CLK2 3
 #define DIO2 1
 
-#define CLK3 2
-#define DIO3 33
+#define CLK3 14
+#define DIO3 21
 
-#define CLK4 22
-#define DIO4 23
+#define CLK4 33
+#define DIO4 32
 
-#define CLK5 18
-#define DIO5 19
+#define CLK5 26
+#define DIO5 25
 
 #define CLK6 2
 #define DIO6 0
@@ -58,6 +58,8 @@ extern String fajr, sunrise, dhuhr, asr, maghrib, isha;
 extern const char* MONTHS[];
 
 extern struct tm timeinfo;
+
+extern const char* API_URL;
 
 extern uint32_t t1, t2;
 

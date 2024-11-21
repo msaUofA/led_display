@@ -29,6 +29,8 @@ const char* MONTHS[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", 
 
 struct tm timeinfo;
 
+const char* API_URL = "http://msauofa.ca/prayertimes";
+
 uint32_t t1 = millis();
 uint32_t t2 = millis();
 
@@ -63,7 +65,7 @@ String prayer_times() {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
 
-    http.begin("http://nasif.ca/prayer-times");
+    http.begin(API_URL);
     uint16_t resp_code = http.GET();
 
     if (resp_code > 0) {
